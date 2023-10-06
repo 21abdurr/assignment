@@ -1,0 +1,49 @@
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+
+:root {
+  --color-primary: #ff9c1b;
+  --color-secondary: #ec1b09;
+  --color-light: #fff;
+  --color-dark: #000;
+  --color-background: #f2f5f9;
+  --color-background-card: #f2f7fc;
+  --gradient-color: linear-gradient(180deg, #ff9a1a 0%, #ec1c09 100%);
+
+  --transition-3s: all ease-in-out 0.3s;
+  --sh-small: 0 0 8px 1px rgba(0, 0, 0, 0.1);
+  --sh-primary: 0 0 8px 0 rgba(255, 156, 27, 0.5);
+
+  --font-primary: "Poppins", sans-serif;
+  --font-body: "Raleway", sans-serif;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: var(--color-background);
+}
+
+.container {
+  width: 90%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 0.1fr 2fr 2fr;
+  grid-template-areas:
+    "aside navbar navbar"
+    "aside main main"
+    "aside main main";
+  gap: 10px;
+}
+
+@media screen and (max-width: 700px) {
+  .container {
+    grid-template-areas:
+      "navbar navbar navbar"
+      "aside aside aside"
+      "main main main";
+  }
+}
